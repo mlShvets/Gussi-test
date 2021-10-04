@@ -1,9 +1,11 @@
-// @import "global.scss";
-// @import "fonts.scss";
+@import "global.scss";
+@import "fonts.scss";
+@import "variables.scss";
 
 // blocks
 // @import "blocks/.scss";
 
-// h1 {
-//   color: red;
-// }
+h1 {
+  color: #111111;
+  font-family: $font-rajdhani;
+}
