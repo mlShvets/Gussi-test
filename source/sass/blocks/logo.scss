@@ -1,0 +1,19 @@
+.logo {
+  position: absolute;
+  padding-top: 24px;
+  padding-left: 16px;
+  top: 0;
+  left: 0;
+  z-index: 20;
+
+  @media (min-width: $desktop-width) {
+    padding-top: 32px;
+  }
+}
+
+.logo__img {
+  @media (min-width: $desktop-width) {
+    width: 95px;
+    height: 53px;
+  }
+}

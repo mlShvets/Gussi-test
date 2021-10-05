@@ -1,0 +1,14 @@
+.button {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  padding: 12px;
+  background-color: $dark-blue;
+  font-family: $font-rajdhani;
+  color: $white;
+  text-align: center;
+  font-size: 24px;
+  line-height: 32px;
+  outline: none;
+  border: none;
+}

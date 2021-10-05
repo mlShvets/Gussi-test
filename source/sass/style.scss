@@ -1,11 +1,22 @@
-@import "global.scss";
 @import "fonts.scss";
 @import "variables.scss";
+@import "global.scss";
 
 // blocks
-// @import "blocks/.scss";
-
-h1 {
-  color: #111111;
-  font-family: $font-rajdhani;
-}
+@import "blocks/page.scss";
+@import "blocks/promo.scss";
+@import "blocks/logo.scss";
+@import "blocks/slider.scss";
+@import "blocks/collection.scss";
+@import "blocks/title.scss";
+@import "blocks/description.scss";
+@import "blocks/characteristics.scss";
+@import "blocks/colour.scss";
+@import "blocks/size.scss";
+@import "blocks/quantity.scss";
+@import "blocks/cost.scss";
+@import "blocks/details.scss";
+@import "blocks/services.scss";
+@import "blocks/collections.scss";
+@import "blocks/subscription.scss";
+@import "blocks/button.scss";

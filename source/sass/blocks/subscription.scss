@@ -1,0 +1,90 @@
+.subscription {
+  padding-bottom: 16px;
+}
+
+.subscription__title {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 500;
+  color: $dark-blue;
+  margin: 0;
+  margin-bottom: 8px;
+}
+
+.subscription__description {
+  font-size: 18px;
+  line-height: 28px;
+  color: $bluesh-gray;
+  opacity: 0.8;
+  margin: 0;
+  margin-bottom: 28px;
+}
+
+.subscription__fieldset {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.subscription__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.subscription__item {
+  margin-bottom: 16px;
+
+  &:last-child {
+    margin-bottom: 12px;
+  }
+}
+
+.subscription__input {
+  box-sizing: border-box;
+  background-color: rgba(225, 230, 237, 0.2);
+  border-color: transparent;
+  border-radius: 1px;
+  width: 100%;
+  height: 44px;
+  padding-left: 16px;
+  opacity: 1;
+
+  &::placeholder {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 40px;
+    color: $bluesh-gray;
+  }
+}
+
+.subscription__fieldset--gender {
+  margin-bottom: 32px;
+}
+
+.subscription__legend {
+  font-size: 20px;
+  line-height: 32px;
+  color: $bluesh-gray;
+  opacity: 0.8;
+  margin-bottom: 8px;
+  padding: 0;
+}
+
+.subscription__label {
+  font-size: 16px;
+  line-height: 24px;
+  color: $dark-blue;
+  opacity: 0.8;
+}
+
+.subscription__label--checkbox {
+  margin-bottom: 16px;
+  display: flex;
+}
+
+.subscription__btn {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 32px;
+}

@@ -1,0 +1,11 @@
+.promo {
+  min-height: 600px;
+  position: relative;
+  margin-bottom: 8px;
+
+  @media (min-width: $desktop-width) {
+    min-height: 768px;
+    width: 600px;
+    margin: 0;
+  }
+}

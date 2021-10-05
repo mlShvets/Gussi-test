@@ -6,17 +6,6 @@
   margin: -1px;
 }
 
-.page {
-  height: 100%;
-  overflow-x: hidden;
-}
-
-body {
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-  min-height: 100%;
-}
-
 img {
   max-width: 100%;
   height: auto;
@@ -24,8 +13,12 @@ img {
 
 .container {
   box-sizing: border-box;
-  // width: ;
   margin: 0 auto;
+  padding: 0 16px;
+
+  @media (min-width: $desktop-width) {
+    padding: 0 52px;
+  }
 }
 
 a {

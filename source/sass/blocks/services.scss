@@ -1,0 +1,38 @@
+.services {
+  margin-bottom: 40px;
+}
+
+.services__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.services__item {
+  padding-bottom: 8px;
+  border-bottom: 1px solid $light-gray;
+  margin-bottom: 16px;
+}
+
+.services__accordion {
+  display: block;
+  position: relative;
+  width: 100%;
+  text-align: left;
+  font-size: 24px;
+  line-height: 32px;
+  color: $dark-blue;
+  background-color: transparent;
+  padding: 0;
+  border: 0;
+}
+
+.services__description {
+  font-size: 16px;
+  line-height: 24px;
+  color: $bluesh-gray;
+}
+
+.services__price {
+  font-weight: 600;
+}
