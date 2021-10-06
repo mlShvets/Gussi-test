@@ -11,4 +11,14 @@
   line-height: 32px;
   outline: none;
   border: none;
+
+
+  &:hover,
+  &:focus {
+    background-color: $btn-hover;
+  }
+
+  &:active {
+    background-color: $btn-active;
+  }
 }

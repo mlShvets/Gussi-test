@@ -25,6 +25,32 @@
   background-color: transparent;
   padding: 0;
   border: 0;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 16px;
+    height: 16px;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    background-image: url("../img/icons/plus.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  &--open::after {
+    background-image: url("../img/icons/minus.svg");
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 1;
+  }
 }
 
 .services__description {

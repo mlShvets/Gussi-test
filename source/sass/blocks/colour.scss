@@ -12,20 +12,58 @@
   gap: 12px;
 }
 
-// .colour__block {
-//   border-radius: 50%;
-//   width: 40px;
-//   height: 40px;
+.colour__item {
+  width: 40px;
+  height: 40px;
+}
 
-//   &--blue {
-//     background-color: $dark-blue;
-//   }
+.colour__mark {
+  position: relative;
 
-//   &--gray {
-//     background-color: $bluesh-gray;
-//   }
+  &::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
 
-//   &--light-blue {
-//     background-color: $light-blue;
-//   }
-// }
+  &--dark-blue {
+    &::before {
+      background-color: $dark-blue;
+    }
+  }
+
+  &--light-blue {
+    &::before {
+      background-color: $light-blue;
+    }
+  }
+
+  &--bluesh-gray {
+    &::before {
+      background-color: $bluesh-gray;
+    }
+  }
+}
+
+.colour__input:checked + .colour__mark::before {
+  box-shadow: 0 0 0 4px $white, 0 0 0 5px $dark-blue;
+}
+
+.colour__input:hover + .colour__mark::before,
+.colour__input:focus + .colour__mark::before {
+  box-shadow: 0 0 0 4px $white, 0 0 0 5px $bluesh-gray;
+}
+
+.colour__input:active + .colour__mark::before {
+  box-shadow: 0 0 0 4px $white, 0 0 0 5px $dark-blue;
+}
+
+.colour__input:disabled + .colour__mark::before {
+  background-color: $light-gray;
+  opacity: 0.5;
+  pointer-events: none;
+}

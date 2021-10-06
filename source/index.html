@@ -80,8 +80,16 @@
         </ul>
         <div class="slider__bottom ">
           <div class="slider__controls">
-            <button class="slider__btn slider__btn--prev" type="button"></button>
-            <button class="slider__btn slider__btn--next" type="button"></button>
+            <button class="slider__btn slider__btn--prev" type="button">
+              <svg width="10" height="16">
+                <use xlink:href="img/sprite.svg#arrow"></use>
+              </svg>
+            </button>
+            <button class="slider__btn slider__btn--next" type="button">
+              <svg width="10" height="16">
+                <use xlink:href="img/sprite.svg#arrow"></use>
+              </svg>
+            </button>
           </div>
           <div class="slider__counter">
             <span class="slider__current">01</span>
@@ -107,17 +115,20 @@
         <div class="colour">
           <h2 class="colour__title title">Сolour</h2>
           <ul class="colour__list">
-            <li class="colour__item colour__item--currnet">
-              <input type="radio" value="dark-blue" name="colour" id="dark-blue" checked>
-              <label class="colour__mark" for="dark-blue" aria-label="dark-blue"></label>
+            <li class="colour__item">
+              <input class="visually-hidden colour__input" type="radio" value="dark-blue" name="colour" id="dark-blue"
+                checked>
+              <label class="colour__mark colour__mark--dark-blue" for="dark-blue" aria-label="dark-blue"></label>
             </li>
             <li class="colour__item">
-              <input type="radio" value="bluesh-gray" name="colour" id="bluesh-gray">
-              <label class="colour__mark" for="bluesh-gray" aria-label="bluesh-gray"></label>
+              <input class="visually-hidden colour__input" type="radio" value="bluesh-gray" name="colour"
+                id="bluesh-gray">
+              <label class="colour__mark colour__mark--bluesh-gray" for="bluesh-gray" aria-label="bluesh-gray"></label>
             </li>
             <li class="colour__item">
-              <input type="radio" value="light-blue" name="colour" id="light-blue">
-              <label class="colour__mark" for="light-blue" aria-label="light-blue"></label>
+              <input class="visually-hidden colour__input" type="radio" value="light-blue" name="colour"
+                id="light-blue">
+              <label class="colour__mark colour__mark--light-blue" for="light-blue" aria-label="light-blue"></label>
             </li>
           </ul>
         </div>
@@ -125,23 +136,23 @@
           <h2 class="size__title title">Size</h2>
           <ul class="size__list">
             <li class="size__item">
-              <input class="size__input" type="radio" value="xs" name="size" id="xs">
+              <input class="size__input visually-hidden" type="radio" value="xs" name="size" id="xs">
               <label class="size__label" for="xs">xs</label>
             </li>
             <li class="size__item">
-              <input class="size__input" type="radio" value="s" name="size" id="s" checked>
+              <input class="size__input visually-hidden" type="radio" value="s" name="size" id="s" checked>
               <label class="size__label" for="s">s</label>
             </li>
             <li class="size__item">
-              <input class="size__input" type="radio" value="m" name="size" id="m">
+              <input class="size__input visually-hidden" type="radio" value="m" name="size" id="m">
               <label class="size__label" for="m">m</label>
             </li>
             <li class="size__item">
-              <input class="size__input" type="radio" value="l" name="size" id="l">
+              <input class="size__input visually-hidden" type="radio" value="l" name="size" id="l">
               <label class="size__label" for="l">l</label>
             </li>
             <li class="size__item">
-              <input class="size__input" type="radio" value="xl" name="size" id="xl" disabled>
+              <input class="size__input visually-hidden" type="radio" value="xl" name="size" id="xl" disabled>
               <label class="size__label" for="xl">xl</label>
             </li>
           </ul>
@@ -173,8 +184,8 @@
       <h2 class="visually-hidden">Delivery, return</h2>
       <ul class="services__list ">
         <li class="services__item">
-          <button class="services__accordion">Delivery</button>
-          <div class="services__description hide">
+          <button class="services__accordion services__accordion--open">Delivery</button>
+          <div class="services__description ">
             <p class="services__text">Delivered on or before Monday, 25 February 2019
               Note: Subject to placing your order before specific cut-off times. Details available in checkout.</p>
             <p class="services__text">For free delivery – spend over <span class="services__price">£18.08</span>
@@ -183,7 +194,7 @@
         </li>
         <li class="services__item">
           <button class="services__accordion">Return</button>
-          <div class="services__description hide">
+          <div class="services__description visually-hidden">
             <p class="services__text">Return through your local Boxberry store available in over 2,300 locations.
               You can create your return on the carrier website by clicking the create return link.
               Open 7 days a week, early until late.</p>
@@ -249,7 +260,7 @@
             <li class="subscription__item">
               <label class="visually-hidden" for="name">Enter your name</label>
               <input class="subscription__input subscription__input--name" type="text" name="name" id="name"
-                placeholder="Enter your name" pattern="\D [^0-9]" required>
+                placeholder="Enter your name" pattern="[A-Za-zА-Яа-яЁё\s]+$" required>
             </li>
             <li class="subscription__item">
               <label class="visually-hidden" for="email">Enter your e-mail</label>
@@ -260,13 +271,17 @@
         </fieldset>
         <fieldset class="subscription__fieldset subscription__fieldset--gender">
           <legend class="subscription__legend">Choose your gender:</legend>
-          <input type="radio" name="gender" value="male" id="male" checked>
+          <input class="subscription__input-radio visually-hidden" type="radio" name="gender" value="male" id="male"
+            checked>
           <label class="subscription__label subscription__label--radio" for="male"> Male</label>
-          <input type="radio" name="gender" value="female" id="female">
+          <input class=" subscription__input-radio visually-hidden" type="radio" name="gender" value="female"
+            id="female">
           <label class="subscription__label subscription__label--radio" for="female"> Female</label>
         </fieldset>
-        <input type="checkbox" name="addition" id="addition" checked>
-        <label class="subscription__label subscription__label--checkbox" for="addition"> Look out for its standout party
+        <input class="subscription__input-checkbox visually-hidden" type="checkbox" name="addition" id="addition"
+          checked>
+        <label class="subscription__label subscription__label--checkbox" for="addition">
+          Look out for its standout party
           dresses, feminine details</label>
         <button type="submit" class="subscription__btn button">Subscribe Gussi</button>
       </form>

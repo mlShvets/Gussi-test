@@ -25,6 +25,11 @@
   width: 100%;
 }
 
+.collections__link:focus,
+.collections__link:hover {
+  opacity: 0.95;
+}
+
 .collections__img-wrap {
   position: relative;
 
