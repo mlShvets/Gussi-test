@@ -1,11 +1,25 @@
+.quantity {
+  margin-right: 74px;
+}
+
+
 .quantity__counter {
   width: 78px;
-  color: $bluesh-gray;
-  font-size: 24px;
-  line-height: 24px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.quantity__number {
+  color: $bluesh-gray;
+  font-size: 24px;
+  line-height: 24px;
+  width: 40px;
+  text-align: center;
+  border: none;
+  pointer-events: none;
+  background-color: transparent;
+  padding: 0;
 }
 
 .quantity__btn {
@@ -14,6 +28,7 @@
   border: none;
   background-color: transparent;
   cursor: pointer;
+  position: relative;
 
   &:hover,
   &:focus {
@@ -34,5 +49,17 @@
     background-image: url("../img/icons/plus.svg");
     background-position: center;
     background-repeat: no-repeat;
+  }
+
+  &--circle::after {
+    position: absolute;
+    content: "";
+    width: 28px;
+    height: 28px;
+    top: 50%;
+    left: 50%;
+    border: 1px solid #e1e6ed;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
   }
 }

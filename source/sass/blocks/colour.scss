@@ -1,5 +1,5 @@
 .colour {
-  margin-bottom: 24px;
+  margin-bottom: 29px;
 }
 
 .colour__list {
@@ -10,6 +10,7 @@
   flex-wrap: wrap;
   align-items: center;
   gap: 12px;
+  margin-left: 4px;
 }
 
 .colour__item {
@@ -19,6 +20,7 @@
 
 .colour__mark {
   position: relative;
+  display: block;
 
   &::before {
     position: absolute;

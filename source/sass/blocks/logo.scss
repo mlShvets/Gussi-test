@@ -1,5 +1,6 @@
 .logo {
   position: absolute;
+  box-sizing: border-box;
   padding-top: 24px;
   padding-left: 16px;
   top: 0;
@@ -8,6 +9,7 @@
 
   @media (min-width: $desktop-width) {
     padding-top: 32px;
+    padding-left: 52px;
   }
 }
 

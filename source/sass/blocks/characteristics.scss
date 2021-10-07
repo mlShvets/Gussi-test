@@ -4,3 +4,23 @@
   padding: 16px 0;
   margin-bottom: 28px;
 }
+
+.characteristics__fieldset {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.characteristics__legend {
+  padding: 0;
+  margin-bottom: 12px;
+}
+
+.characteristics__top {
+  display: flex;
+  flex-direction: column;
+}
+
+.characteristics__bottom {
+  display: flex;
+}

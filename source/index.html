@@ -13,6 +13,8 @@
   <link rel="manifest" href="favicon.webmanifest">
   <link rel="preload" href="fonts/rajdhanimedium.woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="fonts/rajdhaniregular.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/rajdhanisemibold.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/rajdhanibold.woff2" as="font" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
@@ -107,78 +109,87 @@
         <h2 class="description__title title">New collection</h2>
         <p class="description__name">Gussi light coat</p>
         <p class="description__text">It takes you from the party to the
-          after party with its fashion-forward
+          after party&ensp;with its fashion-forward
           styles. A playfull blendof retro and
           modern outdoor design.</p>
       </div>
-      <div class="characteristics">
-        <div class="colour">
-          <h2 class="colour__title title">Сolour</h2>
-          <ul class="colour__list">
-            <li class="colour__item">
-              <input class="visually-hidden colour__input" type="radio" value="dark-blue" name="colour" id="dark-blue"
-                checked>
-              <label class="colour__mark colour__mark--dark-blue" for="dark-blue" aria-label="dark-blue"></label>
-            </li>
-            <li class="colour__item">
-              <input class="visually-hidden colour__input" type="radio" value="bluesh-gray" name="colour"
-                id="bluesh-gray">
-              <label class="colour__mark colour__mark--bluesh-gray" for="bluesh-gray" aria-label="bluesh-gray"></label>
-            </li>
-            <li class="colour__item">
-              <input class="visually-hidden colour__input" type="radio" value="light-blue" name="colour"
-                id="light-blue">
-              <label class="colour__mark colour__mark--light-blue" for="light-blue" aria-label="light-blue"></label>
-            </li>
-          </ul>
+      <form class="characteristics" method="POST" action="https://echo.htmlacademy.ru" id="characteristics-form">
+        <h2 class="visually-hidden">Order form</h2>
+        <div class="characteristics__top">
+          <fieldset class="characteristics__fieldset colour">
+            <legend class="characteristics__legend colour__title title">Сolour</legend>
+            <ul class="colour__list">
+              <li class="colour__item">
+                <input class="visually-hidden colour__input" type="radio" value="dark-blue" name="colour" id="dark-blue"
+                  checked>
+                <label class="colour__mark colour__mark--dark-blue" for="dark-blue" aria-label="dark-blue"></label>
+              </li>
+              <li class="colour__item">
+                <input class="visually-hidden colour__input" type="radio" value="bluesh-gray" name="colour"
+                  id="bluesh-gray">
+                <label class="colour__mark colour__mark--bluesh-gray" for="bluesh-gray"
+                  aria-label="bluesh-gray"></label>
+              </li>
+              <li class="colour__item">
+                <input class="visually-hidden colour__input" type="radio" value="light-blue" name="colour"
+                  id="light-blue">
+                <label class="colour__mark colour__mark--light-blue" for="light-blue" aria-label="light-blue"></label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="characteristics__fieldset size">
+            <legend class="characteristics__legend size__title title">Size</legend>
+            <ul class="size__list">
+              <li class="size__item">
+                <input class="size__input visually-hidden" type="radio" value="xs" name="size" id="xs">
+                <label class="size__label" for="xs">xs</label>
+              </li>
+              <li class="size__item">
+                <input class="size__input visually-hidden" type="radio" value="s" name="size" id="s" checked>
+                <label class="size__label" for="s">s</label>
+              </li>
+              <li class="size__item">
+                <input class="size__input visually-hidden" type="radio" value="m" name="size" id="m">
+                <label class="size__label" for="m">m</label>
+              </li>
+              <li class="size__item">
+                <input class="size__input visually-hidden" type="radio" value="l" name="size" id="l">
+                <label class="size__label" for="l">l</label>
+              </li>
+              <li class="size__item">
+                <input class="size__input visually-hidden" type="radio" value="xl" name="size" id="xl" disabled>
+                <label class="size__label" for="xl">xl</label>
+              </li>
+            </ul>
+            <a class="size__link" href="#">Size guide</a>
+          </fieldset>
         </div>
-        <div class="size">
-          <h2 class="size__title title">Size</h2>
-          <ul class="size__list">
-            <li class="size__item">
-              <input class="size__input visually-hidden" type="radio" value="xs" name="size" id="xs">
-              <label class="size__label" for="xs">xs</label>
-            </li>
-            <li class="size__item">
-              <input class="size__input visually-hidden" type="radio" value="s" name="size" id="s" checked>
-              <label class="size__label" for="s">s</label>
-            </li>
-            <li class="size__item">
-              <input class="size__input visually-hidden" type="radio" value="m" name="size" id="m">
-              <label class="size__label" for="m">m</label>
-            </li>
-            <li class="size__item">
-              <input class="size__input visually-hidden" type="radio" value="l" name="size" id="l">
-              <label class="size__label" for="l">l</label>
-            </li>
-            <li class="size__item">
-              <input class="size__input visually-hidden" type="radio" value="xl" name="size" id="xl" disabled>
-              <label class="size__label" for="xl">xl</label>
-            </li>
-          </ul>
-          <a class="size__link" href="#">Size guide</a>
+        <div class="characteristics__bottom">
+          <fieldset class="characteristics__fieldset quantity">
+            <legend class="characteristics__legend quantity__title title">Quantity</legend>
+            <div class="quantity__counter">
+              <button class="quantity__btn quantity__btn--minus" type="button" aria-label="Add one item"></button>
+              <label class="visually-hidden" for="quantity">quantity of goods</label>
+              <input type="text" class="quantity__number" value="1" id="quantity" name="quantity" readonly>
+              <button class="quantity__btn quantity__btn--plus quantity__btn--circle" type="button"
+                aria-label="Remove one item"></button>
+            </div>
+          </fieldset>
+          <fieldset class="characteristics__fieldset cost">
+            <legend class="characteristics__legend cost__title title">Cost</legend>
+            <span class="cost__dollar">$120<span class="cost__cents">.00</span></span>
+          </fieldset>
         </div>
-        <div class="quantity">
-          <h2 class="quantity__title title">Quantity</h2>
-          <div class="quantity__counter">
-            <button class="quantity__btn quantity__btn--minus" type="button"></button>
-            <span class="quantity__number">1</span>
-            <button class="quantity__btn quantity__btn--plus" type="button"></button>
-          </div>
-        </div>
-        <div class="cost">
-          <h2 class="cost__title title">Cost</h2>
-          <span class="cost__dollar">$120<span class="cost__cents">.00</span></span>
-        </div>
-      </div>
+      </form>
       <div class="details">
         <h2 class="details__title title">Product details</h2>
-        <p class="details__text"> Look out for its standout party dresses, feminine details, statement jackets and cool
+        <p class="details__text"> Look out for its standout party dresses, feminine details, statement jackets and
+          cool
           denim including skinny-cut jeans and cute denim shorts, which sit alongside its directional footwear and
           swimwear ranges.</p>
         <p class="details__composition">63% Viscose, 37% Polyamide. </p>
       </div>
-      <a class="collection__link button" href="#">Order now</a>
+      <button type="submit" class="collection__link button" form="characteristics-form">Order now</button>
     </section>
     <section class="services ">
       <h2 class="visually-hidden">Delivery, return</h2>
@@ -271,12 +282,18 @@
         </fieldset>
         <fieldset class="subscription__fieldset subscription__fieldset--gender">
           <legend class="subscription__legend">Choose your gender:</legend>
-          <input class="subscription__input-radio visually-hidden" type="radio" name="gender" value="male" id="male"
-            checked>
-          <label class="subscription__label subscription__label--radio" for="male"> Male</label>
-          <input class=" subscription__input-radio visually-hidden" type="radio" name="gender" value="female"
-            id="female">
-          <label class="subscription__label subscription__label--radio" for="female"> Female</label>
+          <ul class="subscription__list subscription__list--radio">
+            <li class="subscription__item">
+              <input class="subscription__input-radio visually-hidden" type="radio" name="gender" value="male" id="male"
+                checked>
+              <label class="subscription__label subscription__label--radio" for="male"> Male</label>
+            </li>
+            <li class="subscription__item">
+              <input class=" subscription__input-radio visually-hidden" type="radio" name="gender" value="female"
+                id="female">
+              <label class="subscription__label subscription__label--radio" for="female"> Female</label>
+            </li>
+          </ul>
         </fieldset>
         <input class="subscription__input-checkbox visually-hidden" type="checkbox" name="addition" id="addition"
           checked>

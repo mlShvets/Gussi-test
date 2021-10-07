@@ -54,6 +54,16 @@
   font-size: 48px;
   line-height: 48px;
   margin: 0;
+
+  @media (min-width: $tablet-width) {
+    font-size: 64px;
+    line-height: 64px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 72px;
+    line-height: 72px;
+  }
 }
 
 .slider__slogan {
@@ -61,19 +71,31 @@
   line-height: 24px;
   margin: 0;
   opacity: 0.8;
+
+  @media (min-width: $tablet-width) {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 28px;
+  }
 }
 
 .slider__bottom {
   position: absolute;
-  left: 16px;
-  bottom: 27px;
-  width: 230px;
+  left: 11px;
+  bottom: 23px;
+  width: 235px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 .slider__counter {
+  display: flex;
+  justify-content: space-between;
+  width: 70px;
   font-size: 20px;
   line-height: 32px;
 }

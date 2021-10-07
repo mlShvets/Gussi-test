@@ -9,7 +9,7 @@
 }
 
 .services__item {
-  padding-bottom: 8px;
+  padding-bottom: 7px;
   border-bottom: 1px solid $light-gray;
   margin-bottom: 16px;
 }
@@ -19,6 +19,8 @@
   position: relative;
   width: 100%;
   text-align: left;
+  font-family: $font-rajdhani;
+  font-weight: 500;
   font-size: 24px;
   line-height: 32px;
   color: $dark-blue;
