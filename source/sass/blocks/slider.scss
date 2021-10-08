@@ -41,12 +41,25 @@
   display: block;
   height: 600px;
   width: 100%;
+
+  @media (min-width: $desktop-width) {
+    min-height: 100vh;
+  }
 }
 
 .slider__description-wrap {
   position: absolute;
   padding: 0 16px;
   bottom: 90px;
+
+  @media (min-width: $tablet-width) {
+    bottom: 83px;
+  }
+
+  @media (min-width: $desktop-width) {
+    bottom: 97px;
+    margin-left: 36px;
+  }
 }
 
 .slider__name {
@@ -90,6 +103,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @media (min-width: $desktop-width) {
+    bottom: 29px;
+    margin-left: 36px;
+  }
 }
 
 .slider__counter {

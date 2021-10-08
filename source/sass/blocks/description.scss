@@ -1,3 +1,9 @@
+.description {
+  @media (min-width: $desktop-width) {
+    width: 383px;
+  }
+}
+
 .description__title {
   margin-bottom: 15px;
 
@@ -30,5 +36,12 @@
   @media (min-width: $tablet-width) {
     font-size: 20px;
     line-height: 32px;
+    padding-right: 50px;
+    margin-bottom: 5px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-right: 0;
+    margin-bottom: 8px;
   }
 }

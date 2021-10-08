@@ -3,6 +3,16 @@
   border-bottom: 1px solid $light-gray;
   padding: 16px 0;
   margin-bottom: 28px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 24px;
+    margin-bottom: 17px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 17px;
+    margin-bottom: 26px;
+  }
 }
 
 .characteristics__fieldset {
@@ -19,6 +29,15 @@
 .characteristics__top {
   display: flex;
   flex-direction: column;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+    margin-bottom: 12px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 2px;
+  }
 }
 
 .characteristics__bottom {

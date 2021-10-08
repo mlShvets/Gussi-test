@@ -1,5 +1,20 @@
 .size {
   margin-bottom: 32px;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.size__title {
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 10px;
+  }
 }
 
 .size__list {
@@ -10,10 +25,32 @@
   flex-wrap: wrap;
   gap: 7px;
   margin-bottom: 37px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+    margin-right: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-right: 17px;
+  }
 }
 
 .size__item {
   width: 40px;
+
+  &:first-child {
+    margin-left: -10px;
+    margin-right: 10px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 30px;
+
+    &:first-child {
+      margin: 0;
+    }
+  }
 }
 
 .size__label {
@@ -42,6 +79,11 @@
     transform: translate(-50%, -50%);
     border: 1px solid  $dark-blue;
     border-radius: 50%;
+
+    @media (min-width: $desktop-width) {
+      width: 32px;
+      height: 32px;
+    }
   }
 
   font-size: 28px;

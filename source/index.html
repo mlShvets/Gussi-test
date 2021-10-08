@@ -110,7 +110,7 @@
         <p class="description__name">Gussi light coat</p>
         <p class="description__text">It takes you from the party to the
           after party&ensp;with its fashion-forward
-          styles. A playfull blendof retro and
+          styles. A playfull blend of retro and
           modern outdoor design.</p>
       </div>
       <form class="characteristics" method="POST" action="https://echo.htmlacademy.ru" id="characteristics-form">
@@ -195,8 +195,8 @@
       <h2 class="visually-hidden">Delivery, return</h2>
       <ul class="services__list ">
         <li class="services__item">
-          <button class="services__accordion services__accordion--open">Delivery</button>
-          <div class="services__description ">
+          <button class="services__accordion">Delivery</button>
+          <div class="services__description visually-hidden">
             <p class="services__text">Delivered on or before Monday, 25 February 2019
               Note: Subject to placing your order before specific cut-off times. Details available in checkout.</p>
             <p class="services__text">For free delivery – spend over <span class="services__price">£18.08</span>
@@ -280,20 +280,22 @@
             </li>
           </ul>
         </fieldset>
-        <fieldset class="subscription__fieldset subscription__fieldset--gender">
-          <legend class="subscription__legend">Choose your gender:</legend>
-          <ul class="subscription__list subscription__list--radio">
-            <li class="subscription__item">
-              <input class="subscription__input-radio visually-hidden" type="radio" name="gender" value="male" id="male"
-                checked>
-              <label class="subscription__label subscription__label--radio" for="male"> Male</label>
-            </li>
-            <li class="subscription__item">
-              <input class=" subscription__input-radio visually-hidden" type="radio" name="gender" value="female"
-                id="female">
-              <label class="subscription__label subscription__label--radio" for="female"> Female</label>
-            </li>
-          </ul>
+        <fieldset class="subscription__fieldset">
+          <div class="subscription__gender-wrap">
+            <legend class="subscription__legend">Choose your gender:</legend>
+            <ul class="subscription__list subscription__list--radio">
+              <li class="subscription__item">
+                <input class="subscription__input-radio visually-hidden" type="radio" name="gender" value="male"
+                  id="male" checked>
+                <label class="subscription__label subscription__label--radio" for="male"> Male</label>
+              </li>
+              <li class="subscription__item">
+                <input class=" subscription__input-radio visually-hidden" type="radio" name="gender" value="female"
+                  id="female">
+                <label class="subscription__label subscription__label--radio" for="female"> Female</label>
+              </li>
+            </ul>
+          </div>
         </fieldset>
         <input class="subscription__input-checkbox visually-hidden" type="checkbox" name="addition" id="addition"
           checked>

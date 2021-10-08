@@ -13,6 +13,7 @@
   @media (min-width: $tablet-width) {
     font-size: 32px;
     line-height: 40px;
+    margin-bottom: 0;
   }
 }
 
@@ -28,6 +29,7 @@
   @media (min-width: $tablet-width) {
     font-size: 20px;
     line-height: 32px;
+    margin-bottom: 24px;
   }
 }
 
@@ -35,9 +37,28 @@
   margin: 0;
   padding: 0;
   border: none;
+}
 
-  &--gender {
-    margin-bottom: 16px;
+.subscription__gender-wrap {
+  margin-bottom: 16px;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    margin-bottom: 40px;
+    align-items: center;
+
+    .subscription__item {
+      margin-bottom: 0;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    .subscription__legend {
+      margin-bottom: 0;
+      margin-right: 25px;
+    }
   }
 }
 
@@ -49,6 +70,7 @@
   &--radio {
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
     gap: 24px;
   }
 }
@@ -73,6 +95,10 @@
   font-family: $font-rajdhani;
   font-style: normal;
   font-weight: 500;
+
+  @media (min-width: $tablet-width) {
+    width: 456px;
+  }
 
   &::placeholder {
     font-weight: 500;

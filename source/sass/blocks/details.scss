@@ -3,6 +3,10 @@
   line-height: 24px;
   color: $dark-blue;
   margin-bottom: 40px;
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 71px;
+  }
 }
 
 .details__text {

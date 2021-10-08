@@ -1,7 +1,15 @@
 .quantity {
   margin-right: 74px;
-}
 
+  @media (min-width: $tablet-width) {
+    min-width: 148px;
+    margin-right: 72px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-right: 13px;
+  }
+}
 
 .quantity__counter {
   width: 78px;
