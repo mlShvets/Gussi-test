@@ -95,7 +95,7 @@
           </button>
         </div>
         <div class="slider__counter">
-          <span class="slider__current">01</span>
+          <span class="slider__number">01</span>
           <span class="slider__dash">&mdash;</span>
           <span class="slider__total">03</span>
         </div>
@@ -167,11 +167,11 @@
           <fieldset class="characteristics__fieldset quantity">
             <legend class="characteristics__legend quantity__title title">Quantity</legend>
             <div class="quantity__counter">
-              <button class="quantity__btn quantity__btn--minus" type="button" aria-label="Add one item"></button>
+              <button class="quantity__btn quantity__btn--minus" type="button" aria-label="Add one item"
+                disabled></button>
               <label class="visually-hidden" for="quantity">quantity of goods</label>
               <input type="text" class="quantity__number" value="1" id="quantity" name="quantity" readonly>
-              <button class="quantity__btn quantity__btn--plus quantity__btn--circle" type="button"
-                aria-label="Remove one item"></button>
+              <button class="quantity__btn quantity__btn--plus" type="button" aria-label="Remove one item"></button>
             </div>
           </fieldset>
           <fieldset class="characteristics__fieldset cost">
@@ -195,7 +195,7 @@
       <ul class="services__list ">
         <li class="services__item">
           <button class="services__accordion">Delivery</button>
-          <div class="services__description visually-hidden">
+          <div class="services__description">
             <p class="services__text">Delivered on or before Monday, 25 February 2019
               Note: Subject to placing your order before specific cut-off times. Details available in checkout.</p>
             <p class="services__text">For free delivery – spend over <span class="services__price">£18.08</span>
@@ -204,7 +204,7 @@
         </li>
         <li class="services__item">
           <button class="services__accordion">Return</button>
-          <div class="services__description visually-hidden">
+          <div class="services__description">
             <p class="services__text">Return through your local Boxberry store available in over 2,300 locations.
               You can create your return on the carrier website by clicking the create return link.
               Open 7 days a week, early until late.</p>

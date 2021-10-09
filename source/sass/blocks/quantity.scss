@@ -59,7 +59,7 @@
     background-repeat: no-repeat;
   }
 
-  &--circle::after {
+  &:not(:disabled)::after {
     position: absolute;
     content: "";
     width: 28px;

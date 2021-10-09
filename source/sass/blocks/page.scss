@@ -1,11 +1,6 @@
 .page {
   height: 100%;
   overflow-x: hidden;
-
-  @media (min-width: $desktop-width) {
-    height: 100vh;
-    overflow-y: hidden;
-  }
 }
 
 .page__body {
@@ -16,15 +11,8 @@
   min-width: 320px;
 
   @media (min-width: $desktop-width) {
-    display: grid;
-    grid-template-columns: 44% 1fr;
-    column-gap: 40px;
-  }
-}
-
-.page__main {
-  @media (min-width: $desktop-width) {
-    height: 100vh;
-    overflow-y: scroll;
+    padding-left: 44.15%;
+    width: 100%;
+    box-sizing: border-box;
   }
 }
