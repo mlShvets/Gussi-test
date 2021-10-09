@@ -43,6 +43,7 @@
 
   &--open::after {
     background-image: url("../img/icons/minus.svg");
+    transition: 0.4s;
   }
 
   &:hover,
@@ -59,6 +60,7 @@
   font-size: 16px;
   line-height: 24px;
   color: $bluesh-gray;
+  transition: opacity 0.4s ease-in;
 }
 
 .services__price {

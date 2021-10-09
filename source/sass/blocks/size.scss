@@ -102,6 +102,10 @@
   &::after {
     border-color: $bluesh-gray;
   }
+
+  @media (min-width: $desktop-width) {
+    font-size: 20px;
+  }
 }
 
 .size__input:active + .size__label {
@@ -110,6 +114,10 @@
 
   &::after {
     border-color: $dark-blue;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 20px;
   }
 }
 

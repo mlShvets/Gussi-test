@@ -87,7 +87,7 @@
   box-sizing: border-box;
   background-color: rgba(225, 230, 237, 0.2);
   border-color: transparent;
-  border-radius: 1px;
+  border-radius: 5px;
   width: 100%;
   height: 44px;
   padding-left: 14px;
@@ -95,6 +95,8 @@
   font-family: $font-rajdhani;
   font-style: normal;
   font-weight: 500;
+  transition: box-shadow 0.5s ease-in;
+
 
   @media (min-width: $tablet-width) {
     width: 456px;
@@ -122,6 +124,7 @@
   line-height: 32px;
   color: $bluesh-gray;
   opacity: 0.8;
+  margin: 0;
   margin-bottom: 4px;
   padding: 0;
 }

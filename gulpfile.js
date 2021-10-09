@@ -14,6 +14,8 @@ const svgstore = require('gulp-svgstore');
 const del = require('del');
 const sync = require('browser-sync').create();
 const combineMq = require('gulp-group-css-media-queries');
+const ghPages = require('gh-pages');
+const path = require('path');
 
 // Styles
 
@@ -157,6 +159,13 @@ const combine = () => gulp.src('build/css/style.min.css')
 
 exports.combine = combine;
 
+//Public GH Pages
+
+function deploy(cb) {
+  ghPages.publish(path.join(process.cwd(), './build'), cb);
+}
+exports.deploy = deploy;
+
 // Build
 
 const build = gulp.series(
@@ -177,8 +186,28 @@ const build = gulp.series(
 
 exports.build = build;
 
-// Default
+// Build+server
 
+const buildServer = gulp.series(
+  clean,
+  copy,
+  optimizeImages,
+  gulp.parallel(
+    styles,
+    html,
+    scripts,
+    sprite,
+    createWebp,
+  ),
+  gulp.series(
+    combine,
+    server,
+  ),
+);
+
+exports.buildServer = buildServer;
+
+// Default
 
 exports.default = gulp.series(
   clean,
@@ -192,6 +221,7 @@ exports.default = gulp.series(
     createWebp,
   ),
   gulp.series(
+    combine,
     server,
     watcher,
   ));

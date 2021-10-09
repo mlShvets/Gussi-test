@@ -40,11 +40,12 @@
   border-radius: 4px;
   overflow: hidden;
   width: 100%;
+  transition: opacity 0.3s ease-in;
 }
 
 .collections__link:focus,
 .collections__link:hover {
-  opacity: 0.95;
+  opacity: 0.9;
 }
 
 .collections__img-wrap {
@@ -68,7 +69,7 @@
   height: 160px;
   background-color: $img-background;
 
-  @media (min-width: $tablet-width) and (max-width: 1199px) {
+  @media (min-width: $tablet-width) and (max-width: $desktop-width) {
     height: 287px;
   }
 }
@@ -89,7 +90,7 @@
   line-height: 24px;
   margin: 0;
 
-  @media (min-width: $tablet-width) and (max-width: 1199px) {
+  @media (min-width: $tablet-width) and (max-width: $desktop-width) {
     font-size: 40px;
     line-height: 40px;
   }
@@ -102,7 +103,7 @@
   opacity: 0.5;
   margin: 0;
 
-  @media (min-width: $tablet-width) and (max-width: 1199px) {
+  @media (min-width: $tablet-width) and (max-width: $desktop-width) {
     font-size: 18px;
     line-height: 18px;
   }

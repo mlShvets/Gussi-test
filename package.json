@@ -9,6 +9,7 @@
     "del": "^6.0.0",
     "eslint": "^7.32.0",
     "eslint-config-htmlacademy": "^4.0.2",
+    "gh-pages": "^3.2.3",
     "gulp": "^4.0.2",
     "gulp-group-css-media-queries": "^1.2.2",
     "gulp-htmlmin": "^5.0.1",
@@ -35,6 +36,7 @@
     "webp": "gulp webp",
     "sprite": "gulp sprite",
     "build": "gulp build",
+    "buildServer": "gulp buildServer",
     "start": "gulp"
   },
   "browserslist": [
