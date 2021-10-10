@@ -13,11 +13,14 @@
 .slider__item {
   position: relative;
   visibility: hidden;
+  opacity: 0;
   grid-row-start: 1;
   grid-column-start: 1;
+  transition: opacity 1s ease-out, visibility 0.8s linear;
 
   &--current {
     visibility: visible;
+    opacity: 1;
   }
 }
 
