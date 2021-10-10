@@ -251,6 +251,7 @@ template {
 .slider {
   margin: 0 auto;
   color: #fff;
+  overflow: hidden;
 }
 
 .slider__list {
@@ -294,6 +295,10 @@ template {
   display: block;
   height: 600px;
   width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: top;
+  object-position: top;
 }
 
 .slider__description-wrap {
@@ -674,6 +679,7 @@ template {
   font-size: 40px;
   line-height: 40px;
   color: #c9b8a8;
+  word-break: break-word;
 }
 
 .cost__title {
@@ -825,6 +831,10 @@ template {
   width: 100%;
   height: 160px;
   background-color: #c4c4c4;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: center;
+  object-position: center;
 }
 
 .collections__description {
@@ -888,7 +898,6 @@ template {
 .subscription__list--radio {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
   gap: 24px;
 }
 
@@ -1184,6 +1193,18 @@ template {
   }
 }
 
+@media (min-width:1199px) {
+  .collections {
+    margin-bottom: 36px;
+  }
+
+  .collections__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+}
+
 @media (min-width:1280px) {
   .container {
     padding-left: 92px;
@@ -1325,19 +1346,9 @@ template {
   .details {
     margin-bottom: 71px;
   }
-
-  .collections {
-    margin-bottom: 36px;
-  }
-
-  .collections__list {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 24px;
-  }
 }
 
-@media (min-width:720px) and (max-width:1280px) {
+@media (min-width:720px) and (max-width:1199px) {
   .collections__img {
     height: 287px;
   }
