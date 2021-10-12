@@ -16,3 +16,9 @@
     box-sizing: border-box;
   }
 }
+
+.page__main {
+  @media (min-width: $desktop-width) {
+    margin-top: 56px;
+  }
+}
