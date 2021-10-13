@@ -32,11 +32,7 @@ const activeSlide = (number) => {
     slide.classList.remove('slider__item--current');
   }
   slides[number].classList.add('slider__item--current');
-  slides.forEach((slide) => {
-    if (slide.classList.contains('slider__item--current')) {
-      sliderNumber.textContent = `0${number+1}`;
-    }
-  });
+  number + 1 < 10 ? sliderNumber.textContent = `0${number+1}` : sliderNumber.textContent = `${number+1}`;
 };
 
 const nextSlide = () => {
